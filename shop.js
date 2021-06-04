@@ -1,4 +1,5 @@
 
+
 const goods = [
     { title: 'Shirt', price: 150 },
     { title: 'Socks', price: 50 },
@@ -6,17 +7,21 @@ const goods = [
     { title: 'Shoes', price: 250 },
 ];
 
-const renderGoodsItem = (title = 'Product', price = 'error') => {
+const renderGoodsItem = ({ title = 'product', price }) => {
     return `<div class="goods-item"><h3 class="goods-header">${title}</h3>
     <p class="goods-price">${price}</p></div>`
 };
 
 const renderGoodsList = (list) => {
-    let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
+    let goodsList = list.map(item => renderGoodsItem(item));
     document.querySelector('.goods-list').innerHTML = goodsList.join('');
 }
-let goodsMenu = document.querySelector('.goods-list')
-goodsMenu.style.display = 'flex',
 
-    renderGoodsList(goods);
+renderGoodsList(goods);
 
+class CartGoods {
+    // корзина товаров
+}
+class CartItem {
+    // элемент корзины
+}
