@@ -1,3 +1,14 @@
+//lesson 4 (task 1,2)
+const regExp = /^'|(?<=[^\w])'|'(?=[\s,\.])/g
+const text = `'lavorare' aren't studiare`;
+console.log(text)
+console.log(text.replace(regExp, '"'))
+
+
+
+
+
+//=============================================================================================================
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const makeGETRequest = (url) => {
@@ -55,6 +66,8 @@ const goodsListInstance = new GoodsList();
 goodsListInstance.fetchGoods()
     .then((data) => goodsListInstance.render(data));
 
+
+
 /* fetchGoods() {
     this.goods = [
         { title: 'Shirt', price: 150 },
@@ -78,14 +91,6 @@ render() {
 const list = new GoodsList();
 list.fetchGoods();
 list.render(); */
-
-
-class CartGoods {
-
-}
-class CartItem {
-    // элемент корзины
-}
 
 
 
