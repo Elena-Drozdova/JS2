@@ -45,7 +45,3 @@ Vue.component('component-search', {
 Vue.component('component-cart', {
     template: `<button class="btn-cart" type="button">Cart</button>`
 })
-
-export default {
-    ReformatStr
-};
